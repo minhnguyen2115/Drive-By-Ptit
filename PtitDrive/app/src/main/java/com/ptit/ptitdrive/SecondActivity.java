@@ -192,7 +192,7 @@ public class SecondActivity extends AppCompatActivity {
         MetadataChangeSet metadataChangeSet =
                 new MetadataChangeSet.Builder()
                         .setMimeType("*/*")
-                        .setTitle("Android Photo")
+                        .setTitle("Android Photo.jpg")
                         .build();
         // Set up options to configure and display the create file activity.
         CreateFileActivityOptions createFileActivityOptions =
@@ -239,7 +239,7 @@ public class SecondActivity extends AppCompatActivity {
         MetadataChangeSet metadataChangeSet =
                 new MetadataChangeSet.Builder()
                         .setMimeType("*/*")
-                        .setTitle("Android File")
+                        .setTitle("Android File.txt")
                         .build();
         CreateFileActivityOptions createFileActivityOptions =
                 new CreateFileActivityOptions.Builder()
@@ -344,6 +344,7 @@ public class SecondActivity extends AppCompatActivity {
                 // Called after a file is saved to Drive.
                 if (resultCode == RESULT_OK) {
                     Log.i(TAG, "Image successfully saved.");
+                    Toast.makeText(SecondActivity.this, "successfully", Toast.LENGTH_SHORT).show();
                     mBitmapToSave = null;
                 }
                 break;
@@ -352,6 +353,7 @@ public class SecondActivity extends AppCompatActivity {
                 // Called after a file is saved to Drive.
                 if (resultCode == RESULT_OK) {
                     Log.i(TAG, "File successfully saved.");
+                    Toast.makeText(SecondActivity.this, "successfully", Toast.LENGTH_SHORT).show();
                     filePath = null;
                 }
                 break;
