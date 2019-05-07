@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,9 +10,35 @@
         android:id="@+id/signed_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></com.google.android.gms.common.SignInButton>
+        android:layout_centerInParent="true"></com.google.android.gms.common.SignInButton>
+    <Button
+        android:id="@+id/bt_gg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="PICK"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_shape_green"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#040C52"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signed_in_button"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/bt_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="LOG OUT"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_shape_red"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_name"/>
+</RelativeLayout>

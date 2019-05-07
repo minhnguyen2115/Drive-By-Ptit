@@ -35,4 +35,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.nbsp:library:1.8'
+    implementation 'com.google.android.gms:play-services-drive:9.0.2'
+
+    implementation('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation('com.google.apis:google-api-services-drive:v3-rev29-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
 }
